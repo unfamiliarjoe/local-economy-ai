@@ -1,0 +1,3 @@
+import { Card, PageHeader } from "@leai/ui";
+import { api } from "../../../../lib/api";
+export default async function Page(){ const c=await api.workforceCapacity(); return <div className="space-y-4"><PageHeader title="Capacity Overview" subtitle="Workforce availability and load planning snapshot." /><div className="grid md:grid-cols-3 gap-4"><Card><p className="text-xs">Available</p><p className="text-2xl font-semibold">{c.availableStaff || 0}</p></Card><Card><p className="text-xs">Overallocated</p><p className="text-2xl font-semibold">{c.overallocated || 0}</p></Card><Card><p className="text-xs">Queued</p><p className="text-2xl font-semibold">{c.queuedAssignments || 0}</p></Card></div></div>; }

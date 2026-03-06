@@ -1,0 +1,12 @@
+{
+  "name": "@leai/utils",
+  "private": true,
+  "version": "0.1.0",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "lint": "echo 'utils lint placeholder'",
+    "typecheck": "tsc --noEmit",
+    "test": "echo 'utils tests pending'"
+  }
+}
