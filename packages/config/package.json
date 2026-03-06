@@ -1,0 +1,10 @@
+{
+  "name": "@leai/config",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "lint": "echo 'config lint placeholder'",
+    "typecheck": "echo 'config typecheck placeholder'",
+    "test": "echo 'config tests pending'"
+  }
+}

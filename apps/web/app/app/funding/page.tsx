@@ -1,0 +1,5 @@
+import Link from "next/link";
+import { Card, PageHeader } from "@leai/ui";
+import { api } from "../../../lib/api";
+
+export default async function Page(){ const s=await api.fundingSummary(); return <div className="space-y-4"><PageHeader title="Funding Engine" subtitle="Opportunity pipeline, grant-fit intelligence, and department funding gaps." /><div className="grid md:grid-cols-3 gap-4"><Card><p className="text-xs">Opportunities</p><p className="text-2xl font-semibold">{s.opportunities || 0}</p></Card><Card><p className="text-xs">High-fit opportunities</p><p className="text-2xl font-semibold">{s.highFit || 0}</p></Card><Card><p className="text-xs">Unresolved gaps</p><p className="text-2xl font-semibold">{s.unresolvedGaps || 0}</p></Card></div><div className="flex gap-4 text-sm"><Link href="/app/funding/opportunities" className="text-sky-300">Opportunities</Link><Link href="/app/funding/calendar" className="text-sky-300">Calendar</Link><Link href="/app/funding/gaps" className="text-sky-300">Funding gaps</Link></div></div>; }
